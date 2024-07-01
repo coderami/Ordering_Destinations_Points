@@ -5,7 +5,7 @@
     "colab": {
       "provenance": [],
       "mount_file_id": "1tj714dQDp1F3fIjD-UFI-C67c-fiInZe",
-      "authorship_tag": "ABX9TyNW/O/qCqxP8sXeASUBkUXJ",
+      "authorship_tag": "ABX9TyOAmxBSO83MEWPKYWP2nXjs",
       "include_colab_link": true
     },
     "kernelspec": {
@@ -89,7 +89,7 @@
       "metadata": {
         "id": "HEpYt8loCuIX"
       },
-      "execution_count": 3,
+      "execution_count": 33,
       "outputs": []
     },
     {
@@ -149,7 +149,7 @@
     {
       "cell_type": "markdown",
       "source": [
-        "point 3: 1696 Bayview St"
+        "point 3: 1696 Bayview Ave"
       ],
       "metadata": {
         "id": "86oRuhgJJvOd"
@@ -216,18 +216,18 @@
           "base_uri": "https://localhost:8080/"
         },
         "id": "yQo0O3k34SDX",
-        "outputId": "bab57c24-24a9-4638-b63b-f73e84baf5cf"
+        "outputId": "fb495474-ff6f-4654-8dec-1d42cfd83c96"
       },
-      "execution_count": 6,
+      "execution_count": 39,
       "outputs": [
         {
           "name": "stdout",
           "output_type": "stream",
           "text": [
-            "Enter destination location: 1 Bloor St E\n",
-            "Enter destination location: 300 Bloor St E\n",
-            "Enter destination location: 1696 Bayview St\n",
-            "Enter destination location: 50 Hargrave Lane\n",
+            "Enter destination location: 1 bloor st e\n",
+            "Enter destination location: 300 bloor st e\n",
+            "Enter destination location: 1696 bayview ave\n",
+            "Enter destination location: 50 hargrave lane\n",
             "Enter destination location:  \n"
           ]
         }
@@ -243,22 +243,22 @@
           "base_uri": "https://localhost:8080/"
         },
         "id": "lBifHvYP5f4Y",
-        "outputId": "dc4e7d74-252b-4f67-ed78-b6fb4e6fe07d"
+        "outputId": "42a2f89a-ced0-41b8-c926-784304d7f907"
       },
-      "execution_count": 7,
+      "execution_count": 40,
       "outputs": [
         {
           "output_type": "execute_result",
           "data": {
             "text/plain": [
-              "{'point_1': '1 Bloor St E',\n",
-              " 'point_2': '300 Bloor St E',\n",
-              " 'point_3': '1696 Bayview St',\n",
-              " 'point_4': '50 Hargrave Lane'}"
+              "{'point_1': '1 bloor st e',\n",
+              " 'point_2': '300 bloor st e',\n",
+              " 'point_3': '1696 bayview ave',\n",
+              " 'point_4': '50 hargrave lane'}"
             ]
           },
           "metadata": {},
-          "execution_count": 7
+          "execution_count": 40
         }
       ]
     },
@@ -287,24 +287,17 @@
           "base_uri": "https://localhost:8080/"
         },
         "id": "nujVbvYVIGc2",
-        "outputId": "ddf59dc7-e23b-4c35-9dfc-c6b8edcbbf0a"
+        "outputId": "bea3f9f4-478d-4152-8eff-06af44754a03"
       },
-      "execution_count": 9,
+      "execution_count": 42,
       "outputs": [
-        {
-          "output_type": "stream",
-          "name": "stderr",
-          "text": [
-            "WARNING:urllib3.connectionpool:Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ReadTimeoutError(\"HTTPSConnectionPool(host='nominatim.openstreetmap.org', port=443): Read timed out. (read timeout=1)\")': /search?q=1+Bloor+St+E&format=json&limit=1\n"
-          ]
-        },
         {
           "output_type": "stream",
           "name": "stdout",
           "text": [
             "43.66982485 -79.38610666444188\n",
             "43.672169350000004 -79.37988930525304\n",
-            "46.52995007744788 -87.40613512861168\n",
+            "43.7088373 -79.3764984\n",
             "43.72235307692308 -79.37938197435898\n"
           ]
         }
@@ -325,15 +318,15 @@
           "base_uri": "https://localhost:8080/"
         },
         "id": "ojKI_60add_n",
-        "outputId": "d78495e3-8d7a-47b2-c2ad-0f12b1a94cd0"
+        "outputId": "4365d58c-3d58-45d1-9a9d-d91df07ca393"
       },
-      "execution_count": 10,
+      "execution_count": 43,
       "outputs": [
         {
           "output_type": "stream",
           "name": "stdout",
           "text": [
-            "{'point_1': {'1 Bloor St E': (43.66982485, -79.38610666444188)}, 'point_2': {'300 Bloor St E': (43.672169350000004, -79.37988930525304)}, 'point_3': {'1696 Bayview St': (46.52995007744788, -87.40613512861168)}, 'point_4': {'50 Hargrave Lane': (43.72235307692308, -79.37938197435898)}}\n"
+            "{'point_1': {'1 bloor st e': (43.66982485, -79.38610666444188)}, 'point_2': {'300 bloor st e': (43.672169350000004, -79.37988930525304)}, 'point_3': {'1696 bayview ave': (43.7088373, -79.3764984)}, 'point_4': {'50 hargrave lane': (43.72235307692308, -79.37938197435898)}}\n"
           ]
         }
       ]
@@ -359,9 +352,9 @@
         "    print(\"lat and long:\", pointList[key][secKey])\n",
         "    print(\"distance to departure:\", distance.distance(curLoc, pointList[key][secKey]), \"\\n\")\n",
         "\n",
-        "    distListsValues[secKey] = distance.distance(curLoc, pointList[key][secKey])\n",
+        "    # distListsValues[secKey] = distance.distance(curLoc, pointList[key][secKey])\n",
         "\n",
-        "    distLists[key] = distListsValues\n",
+        "    distLists[key] = distance.distance(curLoc, pointList[key][secKey])\n",
         "\n",
         "print(distLists)\n",
         "\n",
@@ -374,9 +367,9 @@
           "base_uri": "https://localhost:8080/"
         },
         "id": "2YwOKLxperLK",
-        "outputId": "6ce7a83f-cba2-418e-c957-131853a90d47"
+        "outputId": "aa02397b-f2f1-4f0c-8c02-87a96de44c02"
       },
-      "execution_count": 24,
+      "execution_count": 44,
       "outputs": [
         {
           "output_type": "stream",
@@ -386,26 +379,26 @@
             "Sheppard Avenue East, Concord Park Place, Don Valley North, North York, Toronto, Golden Horseshoe, Ontario, M2K 2W1, Canada \n",
             "\n",
             "key =  point_1\n",
-            "sec key: 1 Bloor St E\n",
+            "sec key: 1 bloor st e\n",
             "lat and long: (43.66982485, -79.38610666444188)\n",
             "distance to departure: 11.370856085149727 km \n",
             "\n",
             "key =  point_2\n",
-            "sec key: 300 Bloor St E\n",
+            "sec key: 300 bloor st e\n",
             "lat and long: (43.672169350000004, -79.37988930525304)\n",
             "distance to departure: 11.054668291966255 km \n",
             "\n",
             "key =  point_3\n",
-            "sec key: 1696 Bayview St\n",
-            "lat and long: (46.52995007744788, -87.40613512861168)\n",
-            "distance to departure: 702.1583361289481 km \n",
+            "sec key: 1696 bayview ave\n",
+            "lat and long: (43.7088373, -79.3764984)\n",
+            "distance to departure: 6.973790069424031 km \n",
             "\n",
             "key =  point_4\n",
-            "sec key: 50 Hargrave Lane\n",
+            "sec key: 50 hargrave lane\n",
             "lat and long: (43.72235307692308, -79.37938197435898)\n",
             "distance to departure: 5.520620925618051 km \n",
             "\n",
-            "{'point_1': {'1 Bloor St E': Distance(11.370856085149727), '300 Bloor St E': Distance(11.054668291966255), '1696 Bayview St': Distance(702.1583361289481), '50 Hargrave Lane': Distance(5.520620925618051)}, 'point_2': {'1 Bloor St E': Distance(11.370856085149727), '300 Bloor St E': Distance(11.054668291966255), '1696 Bayview St': Distance(702.1583361289481), '50 Hargrave Lane': Distance(5.520620925618051)}, 'point_3': {'1 Bloor St E': Distance(11.370856085149727), '300 Bloor St E': Distance(11.054668291966255), '1696 Bayview St': Distance(702.1583361289481), '50 Hargrave Lane': Distance(5.520620925618051)}, 'point_4': {'1 Bloor St E': Distance(11.370856085149727), '300 Bloor St E': Distance(11.054668291966255), '1696 Bayview St': Distance(702.1583361289481), '50 Hargrave Lane': Distance(5.520620925618051)}}\n"
+            "{'point_1': Distance(11.370856085149727), 'point_2': Distance(11.054668291966255), 'point_3': Distance(6.973790069424031), 'point_4': Distance(5.520620925618051)}\n"
           ]
         }
       ]
@@ -413,27 +406,68 @@
     {
       "cell_type": "code",
       "source": [
-        "print(distance.distance(curLoc, pointList['point_1'][\"1696 bayview\"]))"
+        "sortedPoint = dictSorter(distLists)"
+      ],
+      "metadata": {
+        "id": "j4gxWGpi7_A9"
+      },
+      "execution_count": 45,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(sortedPoint)"
       ],
       "metadata": {
         "colab": {
-          "base_uri": "https://localhost:8080/",
-          "height": 148
+          "base_uri": "https://localhost:8080/"
         },
-        "id": "tsP6QHZ738O2",
-        "outputId": "11e9bbec-fd20-4861-bfbc-4cb16a38a5d6"
+        "id": "7Neh8V2fas_y",
+        "outputId": "7ef9a00a-e8d7-42cf-c26b-8e2a09508980"
       },
-      "execution_count": null,
+      "execution_count": 46,
       "outputs": [
         {
-          "output_type": "error",
-          "ename": "NameError",
-          "evalue": "name 'distance' is not defined",
-          "traceback": [
-            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
-            "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
-            "\u001b[0;32m<ipython-input-44-8e9f161c9cfd>\u001b[0m in \u001b[0;36m<cell line: 1>\u001b[0;34m()\u001b[0m\n\u001b[0;32m----> 1\u001b[0;31m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mdistance\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mdistance\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mcurLoc\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mpointList\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;34m'point_1'\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m[\u001b[0m\u001b[0;34m\"1696 bayview\"\u001b[0m\u001b[0;34m]\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
-            "\u001b[0;31mNameError\u001b[0m: name 'distance' is not defined"
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'point_4': Distance(5.520620925618051), 'point_3': Distance(6.973790069424031), 'point_2': Distance(11.054668291966255), 'point_1': Distance(11.370856085149727)}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "finalOrderedList = {}\n",
+        "\n",
+        "for key in sortedPoint:\n",
+        "  # for key2 in pointList[key]:\n",
+        "  #   print(key2)\n",
+        "  # finalOrderedList[key] =\n",
+        "  print(key, pointList[key])\n",
+        "\n",
+        "\n",
+        ""
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "yeSAMR6pdqDP",
+        "outputId": "7f34002b-43b7-4f81-fd77-fb2bb75c816d"
+      },
+      "execution_count": 47,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "point_4 {'50 hargrave lane': (43.72235307692308, -79.37938197435898)}\n",
+            "point_3 {'1696 bayview ave': (43.7088373, -79.3764984)}\n",
+            "point_2 {'300 bloor st e': (43.672169350000004, -79.37988930525304)}\n",
+            "point_1 {'1 bloor st e': (43.66982485, -79.38610666444188)}\n"
           ]
         }
       ]
@@ -442,7 +476,7 @@
       "cell_type": "code",
       "source": [],
       "metadata": {
-        "id": "j4gxWGpi7_A9"
+        "id": "TQmSC9uqjgb4"
       },
       "execution_count": null,
       "outputs": []
