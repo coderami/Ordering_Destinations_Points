@@ -5,7 +5,7 @@
     "colab": {
       "provenance": [],
       "mount_file_id": "1tj714dQDp1F3fIjD-UFI-C67c-fiInZe",
-      "authorship_tag": "ABX9TyOAmxBSO83MEWPKYWP2nXjs",
+      "authorship_tag": "ABX9TyP+W+eketFZvYBF2TipmSgt",
       "include_colab_link": true
     },
     "kernelspec": {
@@ -39,7 +39,7 @@
         "id": "ZbFxqzbuKM0U",
         "outputId": "f45dab62-82c1-445c-c4a4-0360cadf1646"
       },
-      "execution_count": 1,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "stream",
@@ -62,13 +62,46 @@
     {
       "cell_type": "code",
       "source": [
+        "!pip install folium"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "7LRe5u5yzCkG",
+        "outputId": "375454de-1cc6-4861-df46-d09bc06e6511"
+      },
+      "execution_count": 48,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Requirement already satisfied: folium in /usr/local/lib/python3.10/dist-packages (0.14.0)\n",
+            "Requirement already satisfied: branca>=0.6.0 in /usr/local/lib/python3.10/dist-packages (from folium) (0.7.2)\n",
+            "Requirement already satisfied: jinja2>=2.9 in /usr/local/lib/python3.10/dist-packages (from folium) (3.1.4)\n",
+            "Requirement already satisfied: numpy in /usr/local/lib/python3.10/dist-packages (from folium) (1.25.2)\n",
+            "Requirement already satisfied: requests in /usr/local/lib/python3.10/dist-packages (from folium) (2.31.0)\n",
+            "Requirement already satisfied: MarkupSafe>=2.0 in /usr/local/lib/python3.10/dist-packages (from jinja2>=2.9->folium) (2.1.5)\n",
+            "Requirement already satisfied: charset-normalizer<4,>=2 in /usr/local/lib/python3.10/dist-packages (from requests->folium) (3.3.2)\n",
+            "Requirement already satisfied: idna<4,>=2.5 in /usr/local/lib/python3.10/dist-packages (from requests->folium) (3.7)\n",
+            "Requirement already satisfied: urllib3<3,>=1.21.1 in /usr/local/lib/python3.10/dist-packages (from requests->folium) (2.0.7)\n",
+            "Requirement already satisfied: certifi>=2017.4.17 in /usr/local/lib/python3.10/dist-packages (from requests->folium) (2024.6.2)\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
         "from geopy.geocoders import Nominatim\n",
-        "from geopy import distance"
+        "from geopy import distance\n",
+        "import folium"
       ],
       "metadata": {
         "id": "QBsBq5qYD8q4"
       },
-      "execution_count": 2,
+      "execution_count": 49,
       "outputs": []
     },
     {
@@ -89,7 +122,7 @@
       "metadata": {
         "id": "HEpYt8loCuIX"
       },
-      "execution_count": 33,
+      "execution_count": null,
       "outputs": []
     },
     {
@@ -116,7 +149,7 @@
       "metadata": {
         "id": "F3sySg5KCwLc"
       },
-      "execution_count": 4,
+      "execution_count": null,
       "outputs": []
     },
     {
@@ -181,7 +214,7 @@
         "id": "gB1jTJD03rCW",
         "outputId": "248e1593-699c-4925-d6ad-c42c754e4d2c"
       },
-      "execution_count": 5,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "stream",
@@ -218,7 +251,7 @@
         "id": "yQo0O3k34SDX",
         "outputId": "fb495474-ff6f-4654-8dec-1d42cfd83c96"
       },
-      "execution_count": 39,
+      "execution_count": null,
       "outputs": [
         {
           "name": "stdout",
@@ -245,7 +278,7 @@
         "id": "lBifHvYP5f4Y",
         "outputId": "42a2f89a-ced0-41b8-c926-784304d7f907"
       },
-      "execution_count": 40,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "execute_result",
@@ -289,7 +322,7 @@
         "id": "nujVbvYVIGc2",
         "outputId": "bea3f9f4-478d-4152-8eff-06af44754a03"
       },
-      "execution_count": 42,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "stream",
@@ -320,7 +353,7 @@
         "id": "ojKI_60add_n",
         "outputId": "4365d58c-3d58-45d1-9a9d-d91df07ca393"
       },
-      "execution_count": 43,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "stream",
@@ -369,7 +402,7 @@
         "id": "2YwOKLxperLK",
         "outputId": "aa02397b-f2f1-4f0c-8c02-87a96de44c02"
       },
-      "execution_count": 44,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "stream",
@@ -411,7 +444,7 @@
       "metadata": {
         "id": "j4gxWGpi7_A9"
       },
-      "execution_count": 45,
+      "execution_count": null,
       "outputs": []
     },
     {
@@ -426,7 +459,7 @@
         "id": "7Neh8V2fas_y",
         "outputId": "7ef9a00a-e8d7-42cf-c26b-8e2a09508980"
       },
-      "execution_count": 46,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "stream",
@@ -448,8 +481,7 @@
         "  # finalOrderedList[key] =\n",
         "  print(key, pointList[key])\n",
         "\n",
-        "\n",
-        ""
+        "\n"
       ],
       "metadata": {
         "colab": {
@@ -458,7 +490,7 @@
         "id": "yeSAMR6pdqDP",
         "outputId": "7f34002b-43b7-4f81-fd77-fb2bb75c816d"
       },
-      "execution_count": 47,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "stream",
@@ -474,9 +506,150 @@
     },
     {
       "cell_type": "code",
-      "source": [],
+      "source": [
+        "m = folium.Map(location=[departureLocation.latitude, departureLocation.longitude], zoom_start=12)"
+      ],
       "metadata": {
         "id": "TQmSC9uqjgb4"
+      },
+      "execution_count": 51,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "folium.Marker(location=[departureLocation.latitude, departureLocation.longitude]).add_to(m)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "hn6h7Aluz1Tt",
+        "outputId": "ea017710-3cf3-4568-b2a4-69c2da3be751"
+      },
+      "execution_count": 52,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "<folium.map.Marker at 0x7c662edc70d0>"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 52
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "m"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 854
+        },
+        "id": "jFGjW2LG0KL8",
+        "outputId": "94e1580d-0b7d-4f21-8cad-d7dfedb2c008"
+      },
+      "execution_count": 53,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "<folium.folium.Map at 0x7c662edc4fa0>"
+            ],
+            "text/html": [
+              "<div style=\"width:100%;\"><div style=\"position:relative;width:100%;height:0;padding-bottom:60%;\"><span style=\"color:#565656\">Make this Notebook Trusted to load map: File -> Trust Notebook</span><iframe srcdoc=\"&lt;!DOCTYPE html&gt;\n",
+              "&lt;html&gt;\n",
+              "&lt;head&gt;\n",
+              "    \n",
+              "    &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;\n",
+              "    \n",
+              "        &lt;script&gt;\n",
+              "            L_NO_TOUCH = false;\n",
+              "            L_DISABLE_3D = false;\n",
+              "        &lt;/script&gt;\n",
+              "    \n",
+              "    &lt;style&gt;html, body {width: 100%;height: 100%;margin: 0;padding: 0;}&lt;/style&gt;\n",
+              "    &lt;style&gt;#map {position:absolute;top:0;bottom:0;right:0;left:0;}&lt;/style&gt;\n",
+              "    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js&quot;&gt;&lt;/script&gt;\n",
+              "    &lt;script src=&quot;https://code.jquery.com/jquery-1.12.4.min.js&quot;&gt;&lt;/script&gt;\n",
+              "    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;\n",
+              "    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js&quot;&gt;&lt;/script&gt;\n",
+              "    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css&quot;/&gt;\n",
+              "    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css&quot;/&gt;\n",
+              "    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css&quot;/&gt;\n",
+              "    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css&quot;/&gt;\n",
+              "    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css&quot;/&gt;\n",
+              "    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css&quot;/&gt;\n",
+              "    \n",
+              "            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,\n",
+              "                initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;\n",
+              "            &lt;style&gt;\n",
+              "                #map_4f69c2cd7f25aed48eff667bd02b9afb {\n",
+              "                    position: relative;\n",
+              "                    width: 100.0%;\n",
+              "                    height: 100.0%;\n",
+              "                    left: 0.0%;\n",
+              "                    top: 0.0%;\n",
+              "                }\n",
+              "                .leaflet-container { font-size: 1rem; }\n",
+              "            &lt;/style&gt;\n",
+              "        \n",
+              "&lt;/head&gt;\n",
+              "&lt;body&gt;\n",
+              "    \n",
+              "    \n",
+              "            &lt;div class=&quot;folium-map&quot; id=&quot;map_4f69c2cd7f25aed48eff667bd02b9afb&quot; &gt;&lt;/div&gt;\n",
+              "        \n",
+              "&lt;/body&gt;\n",
+              "&lt;script&gt;\n",
+              "    \n",
+              "    \n",
+              "            var map_4f69c2cd7f25aed48eff667bd02b9afb = L.map(\n",
+              "                &quot;map_4f69c2cd7f25aed48eff667bd02b9afb&quot;,\n",
+              "                {\n",
+              "                    center: [43.7712275, -79.367035],\n",
+              "                    crs: L.CRS.EPSG3857,\n",
+              "                    zoom: 12,\n",
+              "                    zoomControl: true,\n",
+              "                    preferCanvas: false,\n",
+              "                }\n",
+              "            );\n",
+              "\n",
+              "            \n",
+              "\n",
+              "        \n",
+              "    \n",
+              "            var tile_layer_eb3e554b50222f8d8e14d92ddf30b77d = L.tileLayer(\n",
+              "                &quot;https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,\n",
+              "                {&quot;attribution&quot;: &quot;Data by \\u0026copy; \\u003ca target=\\&quot;_blank\\&quot; href=\\&quot;http://openstreetmap.org\\&quot;\\u003eOpenStreetMap\\u003c/a\\u003e, under \\u003ca target=\\&quot;_blank\\&quot; href=\\&quot;http://www.openstreetmap.org/copyright\\&quot;\\u003eODbL\\u003c/a\\u003e.&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 18, &quot;maxZoom&quot;: 18, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}\n",
+              "            ).addTo(map_4f69c2cd7f25aed48eff667bd02b9afb);\n",
+              "        \n",
+              "    \n",
+              "            var marker_8e8f2f3ecbd76fcd79a3ba3b80f478e7 = L.marker(\n",
+              "                [43.7712275, -79.367035],\n",
+              "                {}\n",
+              "            ).addTo(map_4f69c2cd7f25aed48eff667bd02b9afb);\n",
+              "        \n",
+              "&lt;/script&gt;\n",
+              "&lt;/html&gt;\" style=\"position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;\" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div>"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 53
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "EQMJFbJF0LBu"
       },
       "execution_count": null,
       "outputs": []
